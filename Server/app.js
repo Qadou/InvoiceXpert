@@ -3,9 +3,11 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const app = express();
 const port = 8080;
-const router = require("./Routes/userRoutes");
+const user = require("./Routes/userRoutes");
+const costumer = require("./Routes/costumerRoutes")
 app.use(bodyParser.json());
-app.use("/", router);
+app.use("/", user);
+app.use("/", costumer);
 
 app.get('/', (req, res) => {
     res.send('<h1>InvoiceXpert</h1>');
