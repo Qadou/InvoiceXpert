@@ -1,4 +1,4 @@
-const categorySchema = require("../Models/Post");
+const categorySchema = require("../Models/categorySchema");
 
 const getCategory = async (req, res) => {
   const findAllCategory = await categorySchema.find({});
@@ -42,7 +42,7 @@ const updateCategory = async (req, res) => {
   else return res.send("this Category does not exist");
 };
 
-const deletePorduct = async (req, res) => {
+const deleteCategory = async (req, res) => {
   const id_url = req.params.id;
   const find = await categorySchema.find({ idCategory: id_url });
   console.log(find);
@@ -57,5 +57,5 @@ module.exports = {
   getCategoryById,
   creatCategory,
   updateCategory,
-  deletePorduct,
+  deleteCategory,
 };

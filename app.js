@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json())
 
 //routes
-app.use('/', require('./Routes/PostRoutes'));
+app.use('/', require('./Routes/CategoryRoutes'));
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
